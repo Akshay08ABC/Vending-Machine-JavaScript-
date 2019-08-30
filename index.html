@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<link rel="stylesheet" href="tsVendingMachineStylesheet.css" type="text/css">
+<meta charset= "UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+<!--Header section-->
+<div class= "header">
+<div class="headerText">
+<h1>Tea/Coffee Vending Machine</h1>
+</div>
+<div class= "headerImage">
+<img src= "Header.jpg">
+</div>
+</div>
+<div class= "TitleOfPage" Id= "PageTitleId">Home</div>
+<!--End of header section-->
+<!--Links Part-->
+<div class= "ContentSection">
+<div class="navlinks">
+<ul type="none">
+<li Id= "HomeClick">Home</li>
+<li Id= "DispenseClick">Dispense</li>
+<li Id= "RefillClick">Stock Refill</li>
+<li Id= "ReportClick">Stock Report</li>
+</ul>
+</div>
+<!--End of Link Part-->
+
+<!--content Part -->
+<div class="content" Id= "HomeContentId">
+<div class= "ContentText">
+<div>Welcome To Vending Machine</div> 
+<div>Choose Options To Continue</div>
+</diV>
+<div class= "ContentImage"><img src= "Home Page.jpg"></div>
+</div>
+
+<!-- Dispense-->
+<div class="Dispensecontent" Id= "DispenseContentId">
+<form id="DispenseForm" onsubmit="return false;">
+<fieldset>
+  <div>
+    <label>Select Item:</label>
+    <select id= "SelectItem">
+        <option value="StrongCoffee">Strong Coffee</option>
+        <option value="LightCoffee">Light Coffee</option>
+        <option value="StrongTea">Strong Tea</option>
+        <option value="LightTea">Light Tea</option>
+    </select>
+    </div>
+    <div>
+    <label>Quantity:</label>
+      <input type="number" value="0" name="quantity" id= "quantity" 
+              onkeyup="HandleOnQuantityInputKeyUp()"></input>
+    </div>
+    <div>
+      <input type="checkbox" name="check1" id="WithSugar"></input>
+      <label style="margin-left:10px;">Sugar</label>
+    </div>
+    <div>
+      <button id="Dispense">Dispense</button>
+      <button type="reset" value="reset">Clear</button>
+    </div>
+  </fieldset>
+</form>
+  <div id="DisplayMessage"></div>
+  <div id= "DispenseItemReport">Remaining Stock Report
+    <div>Tea Leaves : 500 </div>
+    <div>Coffe Powder : 500 </div>
+    <div>Sugar : 600 </div>
+    <div>Milk : 8000 </div>
+    <div>Water : 15000 </div>
+  </div>
+  </div>
+
+<!-- Refill-->
+<div class="Refillcontent" Id= "RefillContentId">
+<form id= "RefillForm" onsubmit="return false;">
+  <fieldset>
+    <div class="RefillFormElements"><label for= "tealeaves">Tea Leaves Quantity:</label></div>
+    <div class="RefillFormElements"><input type="number" name="tealeaves"  value= "0" class= "RefillItems" min = "0" max = "500"></input>
+    </div>
+    <div class="RefillFormElements"><label for= "coffeep">Coffee Powder Quantity:</label></div>
+    <div class="RefillFormElements"><input type="number" name="coffeep" value= "0" class= "RefillItems" min= "0" max="500" ></input>
+    </div>
+    <div class="RefillFormElements"><label for= "sugar">Sugar Quantity:</label></div>
+    <div class="RefillFormElements"><input type="number" name="sugar" value= "0" class= "RefillItems" min= "0" max="600" ></input>
+    </div>
+    <div class="RefillFormElements"><label for= "milk">Milk Quantity:</label></div>
+    <div class="RefillFormElements"><input type="number" name="milk" value= "0" class= "RefillItems" min= "0" max="8000" ></input>
+    </div>
+    <div class="RefillFormElements"><label for= "water">Water Quantity:</label></div>
+    <div class="RefillFormElements"><input type="number" name="water" value= "0" class= "RefillItems" min= "0" max="15000" ></input>
+    </div>
+    <div class="RefillFormElements">
+      <button id="refill">Refill</button>
+      <button type="reset" value="clear">Clear</button>
+    </div>
+  </fieldset>
+  </form>
+  <div id= "ShowRefillMessage"></div>
+  <div id= "RefillItemReport">Remaining Stock Report
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+</div>
+<!--Refill-->
+
+<!--Report-->
+<div class="ReportContent" Id= "ReportContentId">
+<div id="stockconsumed">
+<div>Stock Consumed</div>
+<div>Tea Leaves : 0</div>
+<div>Coffee Powder : 0</div>
+<div>Sugar : 0</div>
+<div>Milk : 0</div>
+<div>Water : 0</div>
+</div>
+
+<div id= "stockremaining">
+    <div>Stock Remaining</div>
+    <div>Tea Leaves : 0</div>
+    <div>Coffee Powder : 0</div>
+    <div>Sugar : 0</div>
+    <div>Milk : 0</div>
+    <div>Water : 0</div>
+    </div>
+<div id= "leakageinfo">
+  <div>Leakage Information</div>
+        <div>Milk : 0</div>
+        <div>Water : 0</div>
+  </div>
+
+<div id= "beveragedetails">
+  <div>Beverage Detail</div>
+  <div>No Of Strong Coffee Cups Dispensed : 0</div>
+  <div>No Of Light Coffee Cups Dispensed : 0</div>
+  <div>No Of Strong Tea Cups Dispensed : 0</div>
+  <div>No Of Light Tea Cups Dispensed : 0</div>
+  <div>Profit/Loss : 0</div>
+  </div>
+</div>
+</div>
+
+
+<!--End of content Part -->
+
+<!-- Footer-->
+<footer>Copyright 2010, Vending Machine Technologies</footer>
+
+<script src="tsVendingMachineScript.js"></script>
+</body>
+</html>

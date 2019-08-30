@@ -1,0 +1,436 @@
+body, html
+{
+  background-color: whitesmoke;
+  margin: 0;
+  height: 100%;
+}
+
+/*Header section*/
+.header
+{
+  background: url(gradient2.jpg);
+  background-size: cover;
+}
+.headerText
+{
+  font-family:arial serif;   
+  padding: 20px;
+  display: inline-block;
+  width: 85%;
+  color: #2f18a7;
+}
+.headerImage
+{
+  display: inline-block;
+  padding: 10px;
+  float: right;
+}
+.headerImage img
+{
+  height: 100px;
+}
+/*Header Section*/
+
+.TitleOfPage
+{
+  background-color: #2f18a7;
+  padding: 5px 0 5px 20px;
+  font-size: 20px;
+  color: white;
+}
+
+/*Content Section*/
+.ContentSection
+{
+  background-color: #aeddfb;
+  height: 82%;
+}
+.ContentSection::after
+{
+  content: "";
+  display: table;
+  clear: both;
+}
+.navlinks{
+  width:25%;
+  float:left;
+}
+
+.navlinks ul
+{
+  padding: 0px;
+}
+.navlinks li{
+  padding:10px;
+  font-size:30px; 
+  margin:10px;
+  border: 1px solid black;
+  background-color: #226487;
+  color: white;
+}
+.content{
+  width:75%;
+  background-color:whitesmoke;
+  float: right; 
+  height: 100%;
+}
+.ContentText
+{
+  float: left;
+  width: 65%;
+}
+.ContentText div:first-child{
+  padding:20px;
+  color:green;
+  font-size: 30px;
+}
+.ContentText div:nth-child(2){
+  padding:20px;
+  color:grey;
+}
+.ContentImage
+{
+  padding: 20px;
+}
+.ContentImage img
+{
+  width: 30%;
+  height: 550px;
+}
+.Dispensecontent
+{
+  display: none;
+  width: 75%;
+  height: 100%;
+  float: right;
+  background-color: whitesmoke;
+}
+.Dispensecontent form
+{
+  padding:  10px;
+}
+fieldset
+{
+  margin-top: 10px;
+  width:50%;
+  height: 250px;
+  background-color: #87ceea;
+  padding: 20px;
+}
+.Dispensecontent select
+{
+  font-size:15px;
+  width: 50%;
+}
+.Dispensecontent div
+{
+  margin: 10px;
+  color: blue;
+  font-size: 20px;
+}
+input[type = "number"]
+{
+  margin-left: 15px;
+  width: 50%;
+  font-size: 15px;
+}
+input[type = "checkbox"]
+{
+  margin-left: 75px;
+}
+#Dispense
+{
+  font-size: 20px;
+  color: white;
+  background-color: #3184b9;
+}
+button[type="reset"]
+{
+  font-size: 20px;
+  color: white;
+  background-color: #3184b9;
+}
+#DisplayMessage
+{
+  font-size: 25px;
+  color: #ef1919;
+  text-decoration: underline;
+}
+.Refillcontent
+{
+  display: none;
+  width: 75%;
+  height: 100%;
+  float: right;
+  background-color: whitesmoke;
+}
+.Refillcontent form
+{
+  padding: 10px;
+}
+.RefillFormElements
+{
+  display: inline-block;
+  width: 45%;
+  font-size: 20px;
+  margin: 5px;
+}
+.RefillFormElements button
+{
+  width: 100px;
+  font-size: 20px;
+  background-color: #3184b9;
+  color: white;
+}
+#ShowRefillMessage
+{
+  font-size : 25px;
+  text-decoration: underline;
+  color: #ef1919;
+  margin: 10px;
+}
+#RefillItemReport
+{
+  font-size: 20px;
+  color: blue;
+  margin: 10px;
+}
+.ReportContent
+{
+  display: none;
+  width: 75%;
+  height: 100%;
+  float: right;
+  background-color: whitesmoke; 
+}
+.ReportContent div
+{
+  padding: 5px;
+  color: red;
+  font-size: 15px;
+}
+.ReportContent div:first-child
+{
+  color: blue;
+}
+footer
+{
+  padding: 5px;
+  background: url(gradient1.jpg);
+  background-repeat: repeat-x;
+  position: fixed;
+  bottom : 0;
+  width: 100%;
+  color: blue;
+}
+
+@media screen and (max-width : 1024px)
+{
+  .headerText
+  {
+    font-size: 20px;
+    width: 50%;
+  }
+  .headerImage img
+  {
+    width: 200px;
+    height: 120px;
+  }
+  .TitleOfPage 
+  {
+    font-size: 30px;
+  }
+  .navlinks
+  {
+    width:25%;
+  }
+  .content
+  {
+    width: 75%;
+  }
+  .ContentImage img
+  {
+    width: 400px;
+    height: 600px;
+    float: right;
+  }
+  .ContentText div:first-child
+  {
+    font-size: 40px;
+    width: 100%;
+  }
+  .ContentText div:nth-child(2)
+  {
+    font-size: 30px;
+    width: 100%;
+  }
+  .ContentSection
+  {
+    height: 85%;
+  }
+  footer
+  {
+    font-size: 30px;
+    padding: 0;
+  }
+  .Dispensecontent, .Refillcontent
+  {
+    width: 75%;
+  }
+  .Dispensecontent div
+  {
+    font-size: 30px;
+  }
+  .Dispensecontent select 
+  {
+    font-size: 30px;
+  }
+  input[type = "number"] 
+  {
+    font-size: 30px;
+  }
+  #Dispense
+  {
+    font-size: 25px;
+  }
+  button[type="reset"]
+  {
+    font-size: 25px;
+  }
+  .RefillFormElements
+  {
+    font-size: 25px;
+  }
+  .RefillFormElements button 
+  {
+    width: 100px;
+    font-size: 25px;
+  }
+  #RefillItemReport
+  {
+    font-size: 30px;
+  }
+  #ShowRefillMessage
+  {
+    font-size: 40px
+  }
+  fieldset
+  {
+    width:85%;
+    height: 270px;
+  }
+  .ReportContent
+  {
+    width: 75%;
+  }
+  .ReportContent div
+  {
+    font-size:  30px;
+  }
+}
+
+
+/*For Mobile Screens */
+@media screen and (max-width : 450px)
+{
+  .headerText
+  {
+    font-size: 10px;
+    width: 50%;
+  }
+  .headerImage img
+  {
+    width: 80px;
+    height: 90px;
+  }
+  .TitleOfPage 
+  {
+    font-size: 15px;
+  }
+  .navlinks
+  {
+    width:100%;
+  }
+  .content
+  {
+    width: 100%;
+  }
+  .ContentImage img
+  {
+    width: 300px;
+    height: 400px;
+  }
+  .ContentText div:first-child
+  {
+    font-size: 25px;
+    width: 100%;
+  }
+  .ContentText div:nth-child(2)
+  {
+    font-size: 20px;
+    width: 100%;
+  }
+  .ContentSection
+  {
+    height: 100%;
+  }
+  footer 
+  {
+    font-size: 15px;
+    padding: 5px;
+  }
+  .Dispensecontent, .Refillcontent
+  {
+    width: 100%;
+  }
+  .Dispensecontent div
+  {
+    font-size: 15px;
+  }
+  .Dispensecontent select 
+  {
+    font-size: 15px;
+  }
+  input[type = "number"] 
+  {
+    font-size: 15px;
+  }
+  #Dispense
+  {
+    font-size: 15px;
+  }
+  button[type="reset"]
+  {
+    font-size: 15px;
+  }
+  .RefillFormElements
+  {
+    font-size: 15px;
+  }
+  .RefillFormElements button 
+  {
+    width: 60px;
+    font-size: 20px;
+  }
+  #RefillItemReport
+  {
+    font-size: 20px;
+  }
+  #ShowRefillMessage
+  {
+    font-size: 30px
+  }
+  fieldset
+  {
+    width:85%;
+    height: 270px;
+  }
+  .ReportContent
+  {
+    width: 100%;
+  }
+  .ReportContent div
+  {
+    font-size:  20px;
+  }
+}
